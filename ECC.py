@@ -16,7 +16,7 @@ class Point:
 
     def __add__(self, Q):
         if self == Q:
-            return dbl(self)
+            return self.dbl()
 
         l = (Q.y - self.y) * pow(Q.x-self.x, self.curve.p-2, self.curve.p)
         xr = (l*l - self.x - Q.x) % self.curve.p
